@@ -82,4 +82,6 @@ modules.xml
 .idea/misc.xml
 *.ipr
 
-# End of https://www.gitignore.io/api/intellij+all
+# End of https://www.gitignore.io/api/intellij+allNCracker.iml
+target\
+.idea\

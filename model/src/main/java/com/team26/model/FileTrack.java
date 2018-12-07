@@ -1,5 +1,7 @@
 package com.team26.model;
 
+import com.team26.model.data.Repository;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,7 @@ public class FileTrack implements TrackDAO {
             } else {
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(file, true));
                 count = 0;
+               // Repository repository = Repository.INSTANCE;
             }
         } catch (IOException e) {
             logger.log(Level.WARNING, "Ошибка потока ввода", e);

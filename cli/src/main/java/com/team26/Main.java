@@ -1,8 +1,13 @@
 package com.team26;
 
+import com.team26.model.Track;
+import com.team26.model.data.MusicLibraryDTO;
+import com.team26.model.data.Repository;
+
+import java.nio.file.Paths;
+import java.util.Collection;
+import java.util.List;
 import java.util.Scanner;
-import java.text.DecimalFormat;
-import java.io.IOException;
 
 public class Main
 {
@@ -16,7 +21,7 @@ public class Main
         byte ch = kb.nextByte();
 
         if (ch == 1)
-            Tracks();
+            showTracks();
         else if (ch == 2)
             Genre();
         else if (ch == 3)
@@ -38,8 +43,11 @@ public class Main
     }
 }
 
-void Tracks()
+void showTracks()
 {
+    Repository repository = Repository.INSTANCE;
+    MusicLibraryDTO musicLibraryDTO = repository.getLibrary();
+    Collection<Track> tracks = musicLibraryDTO.getTracks().values();
 
 }
 
